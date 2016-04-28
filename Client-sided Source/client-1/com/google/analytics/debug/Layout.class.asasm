@@ -1,0 +1,1261 @@
+class
+ refid "com.google.analytics.debug:Layout"
+ instance QName(PackageNamespace("com.google.analytics.debug"), "Layout")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("ILayout", [PackageNamespace("com.google.analytics.debug")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.debug:Layout")
+  iinit
+   refid "com.google.analytics.debug:Layout/iinit"
+   param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display")
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasWarning")
+     pushfalse
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasWarning")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasInfo")
+     pushfalse
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasInfo")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug")
+     pushfalse
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasGRAlert")
+     pushfalse
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasGRAlert")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_warningQueue")
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_warningQueue")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_infoQueue")
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_infoQueue")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_GRAlertQueue")
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_GRAlertQueue")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "onKey")
+   method
+    refid "com.google.analytics.debug:Layout/onKey"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      jump                L16
+
+L3:
+      label
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_mainPanel")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_mainPanel")
+      getproperty         QName(PackageNamespace("", "#0"), "visible")
+      not
+      setproperty         QName(PackageNamespace("", "#0"), "visible")
+
+      jump                L37
+
+L10:
+      label
+      findpropstrict      QName(PackageNamespace("", "#0"), "destroy")
+      callpropvoid        QName(PackageNamespace("", "#0"), "destroy"), 0
+
+      jump                L37
+
+L14:
+      label
+      jump                L37
+
+L16:
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "keyCode")
+      setlocal2
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "showHideKey")
+      getlocal2
+      ifstrictne          L25
+
+      pushbyte            0
+      jump                L35
+
+L25:
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "destroyKey")
+      getlocal2
+      ifstrictne          L31
+
+      pushbyte            1
+      jump                L35
+
+L31:
+      jump                L34
+
+      pushbyte            2
+      jump                L35
+
+L34:
+      pushbyte            2
+L35:
+      kill                2
+      lookupswitch        L14, [L3, L10, L14]
+
+L37:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_infoQueue") type QName(PackageNamespace("", "#0"), "Array") end
+  trait method QName(PackageNamespace("", "#0"), "createWarning")
+   method
+    refid "com.google.analytics.debug:Layout/createWarning"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasWarning")
+      convert_b
+      dup
+      iftrue              L10
+
+      pop
+      findpropstrict      QName(PackageNamespace("", "#0"), "isAvailable")
+      callproperty        QName(PackageNamespace("", "#0"), "isAvailable"), 0
+      not
+L10:
+      iffalse             L15
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_warningQueue")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+
+L15:
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars")
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars"), 1
+      coerce_s
+      setlocal1
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasWarning")
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasWarning")
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "Warning")
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "warningTimeout")
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "Warning"), 2
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "Warning")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addToPanel")
+      pushstring          "analytics"
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "addToPanel"), 2
+
+      getlocal2
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_clearWarning")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 5
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug")
+      iffalse             L47
+
+      getlex              QName(PackageNamespace("", "#0"), "visualDebug")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBold"), 1
+
+L47:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "bringToFront")
+   method
+    refid "com.google.analytics.debug:Layout/bringToFront"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      getproperty         QName(PackageNamespace("", "#0"), "numChildren")
+      decrement
+      callpropvoid        QName(PackageNamespace("", "#0"), "setChildIndex"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "createFailureAlert")
+   method
+    refid "com.google.analytics.debug:Layout/createFailureAlert"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      setlocal2
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "verbose")
+      iffalse             L21
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars")
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars"), 1
+      coerce_s
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      pushstring          "Close"
+      pushstring          "close"
+      pushstring          "close"
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "AlertAction"), 3
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      setlocal2
+
+      jump                L28
+
+L21:
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      pushstring          "X"
+      pushstring          "close"
+      pushstring          "close"
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "AlertAction"), 3
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      setlocal2
+
+L28:
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "FailureAlert")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getlocal1
+      getlocal2
+      newarray            1
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "FailureAlert"), 3
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "Alert")
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addToPanel")
+      pushstring          "analytics"
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "addToPanel"), 2
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug")
+      iffalse             L61
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "verbose")
+      iffalse             L58
+
+      getlocal1
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      pushstring          ""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      coerce_s
+      setlocal1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars")
+      getlocal1
+      pushbyte            66
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars"), 2
+      coerce_s
+      setlocal1
+
+L58:
+      getlex              QName(PackageNamespace("", "#0"), "visualDebug")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBold"), 1
+
+L61:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "init")
+   method
+    refid "com.google.analytics.debug:Layout/init"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            10
+      setlocal1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      getproperty         QName(PackageNamespace("", "#0"), "stageWidth")
+      getlocal1
+      pushbyte            2
+      multiply
+      subtract
+      convert_u
+      setlocal2
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      getproperty         QName(PackageNamespace("", "#0"), "stageHeight")
+      getlocal1
+      pushbyte            2
+      multiply
+      subtract
+      convert_u
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "Panel")
+      pushstring          "analytics"
+      getlocal2
+      getlocal3
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "Panel"), 3
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "Panel")
+      dup
+      setlocal            4
+
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "top")
+      setproperty         QName(PackageNamespace("", "#0"), "alignement")
+
+      getlocal            4
+      pushfalse
+      setproperty         QName(PackageNamespace("", "#0"), "stickToEdge")
+
+      getlocal            4
+      pushstring          "Google Analytics v"
+      getlex              QName(PackageNamespace("com.google.analytics"), "GATracker")
+      getproperty         QName(PackageNamespace("", "#0"), "version")
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "title")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_mainPanel")
+      getlocal            4
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_mainPanel")
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addToStage")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "addToStage"), 1
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "bringToFront")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "bringToFront"), 1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "minimizedOnStart")
+      iffalse             L56
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_mainPanel")
+      callpropvoid        QName(PackageNamespace("", "#0"), "onToggle"), 0
+
+L56:
+      findpropstrict      QName(PackageNamespace("", "#0"), "createVisualDebug")
+      callpropvoid        QName(PackageNamespace("", "#0"), "createVisualDebug"), 0
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "onKey")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addToPanel")
+   method
+    refid "com.google.analytics.debug:Layout/addToPanel"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "Panel")
+      setlocal            4
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "getChildByName"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      getlocal3
+      iffalse             L22
+
+      getlocal3
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Panel")
+      astypelate
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "Panel")
+      dup
+      setlocal            4
+
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "addData"), 1
+
+      jump                L29
+
+L22:
+      findpropstrict      QName(PackageNamespace("", "#0"), "trace")
+      pushstring          "panel \""
+      getlocal1
+      add
+      pushstring          "\" not found"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "trace"), 1
+
+L29:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_maxCharPerLine") type QName(PackageNamespace("", "#0"), "int") value Integer(85) end
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_clearInfo")
+   method
+    refid "com.google.analytics.debug:Layout/_clearInfo"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasInfo")
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasInfo")
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_infoQueue")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifngt               L13
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "createInfo")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_infoQueue")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "createInfo"), 1
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars")
+   method
+    refid "com.google.analytics.debug:Layout/_filterMaxChars"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "String")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 4
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            6
+
+      pushstring          "\n"
+      setlocal3
+
+      newarray            0
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal            4
+
+      getlocal1
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal            5
+
+      getlocal2
+      pushbyte            0
+      ifne                L21
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_maxCharPerLine")
+      convert_i
+      setlocal2
+
+L21:
+      pushbyte            0
+      setlocal            7
+
+      jump                L51
+
+L24:
+      label
+      getlocal            5
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Layout"), PackageNamespace("com.google.analytics.debug"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.debug:Layout/_filterMaxChars"), PackageInternalNs("com.google.analytics.debug"), ProtectedNamespace("com.google.analytics.debug:Layout"), StaticProtectedNs("com.google.analytics.debug:Layout"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            6
+
+      jump                L43
+
+L31:
+      label
+      getlocal            4
+      getlocal            6
+      pushbyte            0
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            6
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 1
+      coerce_s
+      setlocal            6
+
+L43:
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlocal2
+      ifgt                L31
+
+      getlocal            4
+      getlocal            6
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      inclocal_i          7
+L51:
+      getlocal            7
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L24
+
+      getlocal            4
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_clearGRAlert")
+   method
+    refid "com.google.analytics.debug:Layout/_clearGRAlert"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasGRAlert")
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasGRAlert")
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_GRAlertQueue")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifngt               L14
+
+      getlex              QName(PackageNamespace("", "#0"), "createGIFRequestAlert")
+      getlocal0
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_GRAlertQueue")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+L14:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasInfo") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_warningQueue") type QName(PackageNamespace("", "#0"), "Array") end
+  trait method QName(PackageNamespace("", "#0"), "createSuccessAlert")
+   method
+    refid "com.google.analytics.debug:Layout/createSuccessAlert"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      setlocal2
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "verbose")
+      iffalse             L21
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars")
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars"), 1
+      coerce_s
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      pushstring          "Close"
+      pushstring          "close"
+      pushstring          "close"
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "AlertAction"), 3
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      setlocal2
+
+      jump                L28
+
+L21:
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      pushstring          "X"
+      pushstring          "close"
+      pushstring          "close"
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "AlertAction"), 3
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      setlocal2
+
+L28:
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "SuccessAlert")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getlocal1
+      getlocal2
+      newarray            1
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "SuccessAlert"), 3
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "Alert")
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addToPanel")
+      pushstring          "analytics"
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "addToPanel"), 2
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug")
+      iffalse             L61
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "verbose")
+      iffalse             L58
+
+      getlocal1
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      pushstring          ""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      coerce_s
+      setlocal1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars")
+      getlocal1
+      pushbyte            66
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars"), 2
+      coerce_s
+      setlocal1
+
+L58:
+      getlex              QName(PackageNamespace("", "#0"), "visualDebug")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBold"), 1
+
+L61:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "isAvailable")
+   method
+    refid "com.google.analytics.debug:Layout/isAvailable"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      pushnull
+      equals
+      not
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "createAlert")
+   method
+    refid "com.google.analytics.debug:Layout/createAlert"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars")
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars"), 1
+      coerce_s
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "Alert")
+      getlocal1
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      pushstring          "Close"
+      pushstring          "close"
+      pushstring          "close"
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "AlertAction"), 3
+      newarray            1
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "Alert"), 2
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "Alert")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addToPanel")
+      pushstring          "analytics"
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "addToPanel"), 2
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug")
+      iffalse             L27
+
+      getlex              QName(PackageNamespace("", "#0"), "visualDebug")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBold"), 1
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasWarning") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "createInfo")
+   method
+    refid "com.google.analytics.debug:Layout/createInfo"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasInfo")
+      convert_b
+      dup
+      iftrue              L10
+
+      pop
+      findpropstrict      QName(PackageNamespace("", "#0"), "isAvailable")
+      callproperty        QName(PackageNamespace("", "#0"), "isAvailable"), 0
+      not
+L10:
+      iffalse             L15
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_infoQueue")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+
+L15:
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars")
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars"), 1
+      coerce_s
+      setlocal1
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasInfo")
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasInfo")
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "Info")
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "infoTimeout")
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "Info"), 2
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "Info")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addToPanel")
+      pushstring          "analytics"
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "addToPanel"), 2
+
+      getlocal2
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_clearInfo")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 5
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug")
+      iffalse             L47
+
+      getlex              QName(PackageNamespace("", "#0"), "visualDebug")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "write"), 1
+
+L47:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_mainPanel") type QName(PackageNamespace("com.google.analytics.debug"), "Panel") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_GRAlertQueue") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
+  trait method QName(PackageNamespace("", "#0"), "createGIFRequestAlert")
+   method
+    refid "com.google.analytics.debug:Layout/createGIFRequestAlert"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("flash.net"), "URLRequest")
+    param QName(PackageNamespace("com.google.analytics.core"), "GIFRequest")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 8
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal            4
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+      getscopeobject      1
+      getlocal3
+      setslot             3
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasGRAlert")
+      iffalse             L27
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_GRAlertQueue")
+      getscopeobject      1
+      getslot             1
+      getscopeobject      1
+      getslot             2
+      getscopeobject      1
+      getslot             3
+      newarray            3
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+
+L27:
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasGRAlert")
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasGRAlert")
+
+      getscopeobject      1
+      newfunction         "com.google.analytics.debug:Layout/createGIFRequestAlert/inline_method"
+      coerce              QName(PackageNamespace("", "#0"), "Function")
+      setslot             4
+
+      getscopeobject      1
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars"), 1
+      coerce_s
+      setslot             1
+
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "GIFRequestAlert")
+      getscopeobject      1
+      getslot             1
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      pushstring          "OK"
+      pushstring          "ok"
+      getscopeobject      1
+      getslot             4
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "AlertAction"), 3
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+      pushstring          "Cancel"
+      pushstring          "cancel"
+      pushstring          "close"
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "AlertAction"), 3
+      newarray            2
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "GIFRequestAlert"), 2
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "GIFRequestAlert")
+      setslot             5
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addToPanel")
+      pushstring          "analytics"
+      getscopeobject      1
+      getslot             5
+      callpropvoid        QName(PackageNamespace("", "#0"), "addToPanel"), 2
+
+      getscopeobject      1
+      getslot             5
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_clearGRAlert")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 5
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug")
+      iffalse             L100
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "verbose")
+      iffalse             L96
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      pushstring          ""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      coerce_s
+      setslot             1
+
+      getscopeobject      1
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars")
+      getscopeobject      1
+      getslot             1
+      pushbyte            66
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_filterMaxChars"), 2
+      coerce_s
+      setslot             1
+
+L96:
+      getlex              QName(PackageNamespace("", "#0"), "visualDebug")
+      getscopeobject      1
+      getslot             1
+      callpropvoid        QName(PackageNamespace("", "#0"), "write"), 1
+
+L100:
+      returnvoid
+     end ; code
+     trait slot QName(PackageInternalNs("com.google.analytics.debug"), "ref") slotid 3 type QName(PackageNamespace("com.google.analytics.core"), "GIFRequest") end
+     trait slot QName(PackageInternalNs("com.google.analytics.debug"), "message") slotid 1 type QName(PackageNamespace("", "#0"), "String") end
+     trait slot QName(PackageInternalNs("com.google.analytics.debug"), "gra") slotid 5 type QName(PackageNamespace("com.google.analytics.debug"), "GIFRequestAlert") end
+     trait slot QName(PackageInternalNs("com.google.analytics.debug"), "f") slotid 4 type QName(PackageNamespace("", "#0"), "Function") end
+     trait slot QName(PackageInternalNs("com.google.analytics.debug"), "request") slotid 2 type QName(PackageNamespace("flash.net"), "URLRequest") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "createVisualDebug")
+   method
+    refid "com.google.analytics.debug:Layout/createVisualDebug"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "visualDebug")
+      iftrue              L22
+
+      findproperty        QName(PackageNamespace("", "#0"), "visualDebug")
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "Debug")
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "Debug"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "visualDebug")
+
+      getlex              QName(PackageNamespace("", "#0"), "visualDebug")
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "bottom")
+      setproperty         QName(PackageNamespace("", "#0"), "alignement")
+
+      getlex              QName(PackageNamespace("", "#0"), "visualDebug")
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "stickToEdge")
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addToPanel")
+      pushstring          "analytics"
+      getlex              QName(PackageNamespace("", "#0"), "visualDebug")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addToPanel"), 2
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug")
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasDebug")
+
+L22:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addToStage")
+   method
+    refid "com.google.analytics.debug:Layout/addToStage"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_display")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_clearWarning")
+   method
+    refid "com.google.analytics.debug:Layout/_clearWarning"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasWarning")
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasWarning")
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_warningQueue")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifngt               L13
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "createWarning")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_warningQueue")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "createWarning"), 1
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "createPanel")
+   method
+    refid "com.google.analytics.debug:Layout/createPanel"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "Panel")
+      getlocal1
+      getlocal2
+      getlocal3
+      constructprop       QName(PackageNamespace("com.google.analytics.debug"), "Panel"), 3
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "Panel")
+      dup
+      setlocal            4
+
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "center")
+      setproperty         QName(PackageNamespace("", "#0"), "alignement")
+
+      getlocal            4
+      pushfalse
+      setproperty         QName(PackageNamespace("", "#0"), "stickToEdge")
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addToStage")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "addToStage"), 1
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "bringToFront")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "bringToFront"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "visualDebug") type QName(PackageNamespace("com.google.analytics.debug"), "Debug") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_hasGRAlert") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "destroy")
+   method
+    refid "com.google.analytics.debug:Layout/destroy"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_mainPanel")
+      callpropvoid        QName(PackageNamespace("", "#0"), "close"), 0
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
+      pushnull
+      setproperty         QName(PackageNamespace("", "#0"), "layout")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.debug:Layout/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

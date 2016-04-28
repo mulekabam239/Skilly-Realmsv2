@@ -1,0 +1,189 @@
+class
+ refid "com.google.analytics.debug:Warning"
+ instance QName(PackageNamespace("com.google.analytics.debug"), "Warning")
+  extends QName(PackageNamespace("com.google.analytics.debug"), "Label")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.debug:Warning")
+  iinit
+   refid "com.google.analytics.debug:Warning/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "uint")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   optional Integer(3000)
+   body
+    maxstack 6
+    localcount 3
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     pushstring          "uiWarning"
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Style")
+     getproperty         QName(PackageNamespace("", "#0"), "warningColor")
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "top")
+     pushfalse
+     constructsuper      5
+
+     getlex              QName(PackageNamespace("", "#0"), "margin")
+     pushbyte            32
+     setproperty         QName(PackageNamespace("", "#0"), "top")
+
+     getlocal2
+     pushbyte            0
+     ifngt               L33
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Warning"), "_timer")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+     getlocal2
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Warning"), "_timer")
+
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Warning"), "_timer")
+     callpropvoid        QName(PackageNamespace("", "#0"), "start"), 0
+
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Warning"), "_timer")
+     getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+     getproperty         QName(PackageNamespace("", "#0"), "TIMER_COMPLETE")
+     getlex              QName(PackageNamespace("", "#0"), "onComplete")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 5
+
+L33:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "close")
+   method
+    refid "com.google.analytics.debug:Warning/close"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "parent")
+      pushnull
+      ifeq                L8
+
+      getlex              QName(PackageNamespace("", "#0"), "parent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeChild"), 1
+
+L8:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "onLink") flag OVERRIDE
+   method
+    refid "com.google.analytics.debug:Warning/onLink"
+    param QName(PackageNamespace("flash.events"), "TextEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      jump                L9
+
+L3:
+      label
+      findpropstrict      QName(PackageNamespace("", "#0"), "close")
+      callpropvoid        QName(PackageNamespace("", "#0"), "close"), 0
+
+      jump                L23
+
+L7:
+      label
+      jump                L23
+
+L9:
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "text")
+      setlocal2
+
+      pushstring          "hide"
+      getlocal2
+      ifstrictne          L17
+
+      pushbyte            0
+      jump                L21
+
+L17:
+      jump                L20
+
+      pushbyte            1
+      jump                L21
+
+L20:
+      pushbyte            1
+L21:
+      kill                2
+      lookupswitch        L7, [L3, L7]
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Warning"), "_timer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait method QName(PackageNamespace("", "#0"), "onComplete")
+   method
+    refid "com.google.analytics.debug:Warning/onComplete"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "close")
+      callpropvoid        QName(PackageNamespace("", "#0"), "close"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.debug:Warning/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

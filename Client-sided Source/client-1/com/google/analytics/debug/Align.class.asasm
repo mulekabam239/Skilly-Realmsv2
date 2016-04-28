@@ -1,0 +1,175 @@
+class
+ refid "com.google.analytics.debug:Align"
+ instance QName(PackageNamespace("com.google.analytics.debug"), "Align")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.debug:Align")
+  iinit
+   refid "com.google.analytics.debug:Align/iinit"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "String")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Utf8("")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_value")
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_value")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_name")
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_name")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_value") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "valueOf")
+   method
+    refid "com.google.analytics.debug:Align/valueOf"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_value")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_name") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.google.analytics.debug:Align/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_name")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.debug:Align/cinit"
+  body
+   maxstack 4
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "none")
+    getlocal0
+    pushbyte            0
+    pushstring          "none"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "none")
+
+    findproperty        QName(PackageNamespace("", "#0"), "top")
+    getlocal0
+    pushbyte            1
+    pushstring          "top"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "top")
+
+    findproperty        QName(PackageNamespace("", "#0"), "bottom")
+    getlocal0
+    pushbyte            2
+    pushstring          "bottom"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "bottom")
+
+    findproperty        QName(PackageNamespace("", "#0"), "right")
+    getlocal0
+    pushbyte            16
+    pushstring          "right"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "right")
+
+    findproperty        QName(PackageNamespace("", "#0"), "left")
+    getlocal0
+    pushbyte            32
+    pushstring          "left"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "left")
+
+    findproperty        QName(PackageNamespace("", "#0"), "center")
+    getlocal0
+    pushshort           256
+    pushstring          "center"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "center")
+
+    findproperty        QName(PackageNamespace("", "#0"), "topLeft")
+    getlocal0
+    pushbyte            33
+    pushstring          "topLeft"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "topLeft")
+
+    findproperty        QName(PackageNamespace("", "#0"), "topRight")
+    getlocal0
+    pushbyte            17
+    pushstring          "topRight"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "topRight")
+
+    findproperty        QName(PackageNamespace("", "#0"), "bottomLeft")
+    getlocal0
+    pushbyte            34
+    pushstring          "bottomLeft"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "bottomLeft")
+
+    findproperty        QName(PackageNamespace("", "#0"), "bottomRight")
+    getlocal0
+    pushbyte            18
+    pushstring          "bottomRight"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "bottomRight")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "bottomRight") slotid 10 type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+ trait const QName(PackageNamespace("", "#0"), "right") slotid 4 type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+ trait const QName(PackageNamespace("", "#0"), "left") slotid 5 type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+ trait const QName(PackageNamespace("", "#0"), "topRight") slotid 8 type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+ trait const QName(PackageNamespace("", "#0"), "bottom") slotid 3 type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+ trait const QName(PackageNamespace("", "#0"), "bottomLeft") slotid 9 type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+ trait const QName(PackageNamespace("", "#0"), "topLeft") slotid 7 type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+ trait const QName(PackageNamespace("", "#0"), "center") slotid 6 type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+ trait const QName(PackageNamespace("", "#0"), "none") slotid 1 type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+ trait const QName(PackageNamespace("", "#0"), "top") slotid 2 type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+end ; class

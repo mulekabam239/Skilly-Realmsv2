@@ -1,0 +1,17 @@
+method
+ refid "com.google.analytics.debug:Layout/createGIFRequestAlert/inline_method"
+ returns QName(PackageNamespace("", "#0"), "void")
+ body
+  maxstack 2
+  localcount 1
+  initscopedepth 5
+  maxscopedepth 5
+  code
+   getlex              QName(PackageInternalNs("com.google.analytics.debug"), "ref")
+   getlex              QName(PackageInternalNs("com.google.analytics.debug"), "request")
+   callpropvoid        QName(PackageNamespace("", "#0"), "sendRequest"), 1
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

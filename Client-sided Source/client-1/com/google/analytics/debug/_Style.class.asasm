@@ -1,0 +1,226 @@
+class
+ refid "com.google.analytics.debug:_Style"
+ instance QName(PackageNamespace("com.google.analytics.debug"), "_Style")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.debug:_Style")
+  iinit
+   refid "com.google.analytics.debug:_Style/iinit"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_sheet")
+     findpropstrict      QName(PackageNamespace("flash.text"), "StyleSheet")
+     constructprop       QName(PackageNamespace("flash.text"), "StyleSheet"), 0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_sheet")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_loader")
+     findpropstrict      QName(PackageNamespace("flash.net"), "URLLoader")
+     constructprop       QName(PackageNamespace("flash.net"), "URLLoader"), 0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_loader")
+
+     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_init")
+     callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_init"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "failureColor") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_parseSheet")
+   method
+    refid "com.google.analytics.debug:_Style/_parseSheet"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_sheet")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "parseCSS"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "borderColor") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "backgroundColor") type QName(PackageNamespace("", "#0"), "uint") end
+  trait getter QName(PackageNamespace("", "#0"), "sheet")
+   method
+    refid "com.google.analytics.debug:_Style/sheet/getter"
+    returns QName(PackageNamespace("flash.text"), "StyleSheet")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_sheet")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_sheet") type QName(PackageNamespace("flash.text"), "StyleSheet") end
+  trait slot QName(PackageNamespace("", "#0"), "roundedCorner") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "warningColor") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "infoColor") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_init")
+   method
+    refid "com.google.analytics.debug:_Style/_init"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          ""
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          "a{text-decoration: underline;}\n"
+      add
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          ".uiLabel{color: #000000;font-family: Arial;font-size: 12;margin-left: 2;margin-right: 2;}\n"
+      add
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          ".uiWarning{color: #ffffff;font-family: Arial;font-size: 14;font-weight: bold;margin-left: 6;margin-right: 6;}\n"
+      add
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          ".uiAlert{color: #ffffff;font-family: Arial;font-size: 14;font-weight: bold;margin-left: 6;margin-right: 6;}\n"
+      add
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          ".uiInfo{color: #000000;font-family: Arial;font-size: 14;font-weight: bold;margin-left: 6;margin-right: 6;}\n"
+      add
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          ".uiSuccess{color: #ffffff;font-family: Arial;font-size: 12;font-weight: bold;margin-left: 6;margin-right: 6;}\n"
+      add
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          ".uiFailure{color: #ffffff;font-family: Arial;font-size: 12;font-weight: bold;margin-left: 6;margin-right: 6;}\n"
+      add
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          ".uiAlertAction{color: #ffffff;text-align: center;font-family: Arial;font-size: 12;font-weight: bold;margin-left: 6;margin-right: 6;}\n"
+      add
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          ".uiAlertTitle{color: #ffffff;font-family: Arial;font-size: 16;font-weight: bold;margin-left: 6;margin-right: 6;}\n"
+      add
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      pushstring          "\n"
+      add
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+
+      findproperty        QName(PackageNamespace("", "#0"), "roundedCorner")
+      pushbyte            6
+      initproperty        QName(PackageNamespace("", "#0"), "roundedCorner")
+
+      findproperty        QName(PackageNamespace("", "#0"), "backgroundColor")
+      pushint             13421772
+      initproperty        QName(PackageNamespace("", "#0"), "backgroundColor")
+
+      findproperty        QName(PackageNamespace("", "#0"), "borderColor")
+      pushint             5592405
+      initproperty        QName(PackageNamespace("", "#0"), "borderColor")
+
+      findproperty        QName(PackageNamespace("", "#0"), "infoColor")
+      pushint             16777113
+      initproperty        QName(PackageNamespace("", "#0"), "infoColor")
+
+      findproperty        QName(PackageNamespace("", "#0"), "alertColor")
+      pushint             16763904
+      initproperty        QName(PackageNamespace("", "#0"), "alertColor")
+
+      findproperty        QName(PackageNamespace("", "#0"), "warningColor")
+      pushint             13369344
+      initproperty        QName(PackageNamespace("", "#0"), "warningColor")
+
+      findproperty        QName(PackageNamespace("", "#0"), "successColor")
+      pushint             65280
+      initproperty        QName(PackageNamespace("", "#0"), "successColor")
+
+      findproperty        QName(PackageNamespace("", "#0"), "failureColor")
+      pushint             16711680
+      initproperty        QName(PackageNamespace("", "#0"), "failureColor")
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_parseSheet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_parseSheet"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "alertColor") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "successColor") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_loader") type QName(PackageNamespace("flash.net"), "URLLoader") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:_Style"), "_defaultSheet") type QName(PackageNamespace("", "#0"), "String") end
+ end ; instance
+ cinit
+  refid "com.google.analytics.debug:_Style/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

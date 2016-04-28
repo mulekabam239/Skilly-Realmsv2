@@ -1,0 +1,57 @@
+script ; 1975
+ sinit
+  refid "com.google.analytics.debug:Debug.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Debug", [PackageNamespace("com.google.analytics.debug")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.google.analytics.debug"), "UISprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.google.analytics.debug"), "Label")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.google.analytics.debug"), "Label")
+    newclass            "com.google.analytics.debug:Debug"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.google.analytics.debug"), "Debug")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.google.analytics.debug"), "Debug")
+  #include "Debug.class.asasm"
+ end ; trait
+end ; script

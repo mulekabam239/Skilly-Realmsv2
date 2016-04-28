@@ -1,0 +1,121 @@
+class
+ refid "com.google.analytics.debug:ILayout"
+ instance QName(PackageNamespace("com.google.analytics.debug"), "ILayout")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   refid "com.google.analytics.debug:ILayout/iinit"
+  end ; method
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "createAlert")
+   method
+    refid "com.google.analytics.debug:ILayout:createAlert"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "addToStage")
+   method
+    refid "com.google.analytics.debug:ILayout:addToStage"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "createGIFRequestAlert")
+   method
+    refid "com.google.analytics.debug:ILayout:createGIFRequestAlert"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("flash.net"), "URLRequest")
+    param QName(PackageNamespace("com.google.analytics.core"), "GIFRequest")
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "createWarning")
+   method
+    refid "com.google.analytics.debug:ILayout:createWarning"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "createPanel")
+   method
+    refid "com.google.analytics.debug:ILayout:createPanel"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "createInfo")
+   method
+    refid "com.google.analytics.debug:ILayout:createInfo"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "createFailureAlert")
+   method
+    refid "com.google.analytics.debug:ILayout:createFailureAlert"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "addToPanel")
+   method
+    refid "com.google.analytics.debug:ILayout:addToPanel"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "init")
+   method
+    refid "com.google.analytics.debug:ILayout:init"
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "createSuccessAlert")
+   method
+    refid "com.google.analytics.debug:ILayout:createSuccessAlert"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "createVisualDebug")
+   method
+    refid "com.google.analytics.debug:ILayout:createVisualDebug"
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "destroy")
+   method
+    refid "com.google.analytics.debug:ILayout:destroy"
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "bringToFront")
+   method
+    refid "com.google.analytics.debug:ILayout:bringToFront"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("", "#0"), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.google.analytics.debug:ILayout"), "isAvailable")
+   method
+    refid "com.google.analytics.debug:ILayout:isAvailable"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.debug:ILayout/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,850 @@
+class
+ refid "com.google.analytics.debug:UISprite"
+ instance QName(PackageNamespace("com.google.analytics.debug"), "UISprite")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.debug:UISprite")
+  iinit
+   refid "com.google.analytics.debug:UISprite/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "listenResize")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "listenResize")
+
+     findproperty        QName(PackageNamespace("", "#0"), "alignement")
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "none")
+     initproperty        QName(PackageNamespace("", "#0"), "alignement")
+
+     getlocal0
+     getlocal1
+     initproperty        QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "alignTarget")
+
+     findproperty        QName(PackageNamespace("", "#0"), "margin")
+     findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "Margin")
+     constructprop       QName(PackageNamespace("com.google.analytics.debug"), "Margin"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "margin")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "ADDED_TO_STAGE")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onAddedToStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onRemovedFromStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait getter QName(PackageNamespace("", "#0"), "forcedHeight")
+   method
+    refid "com.google.analytics.debug:UISprite/forcedHeight/getter"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedHeight")
+      iffalse             L6
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedHeight")
+      returnvalue
+
+L6:
+      getlex              QName(PackageNamespace("", "#0"), "height")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onAddedToStage")
+   method
+    refid "com.google.analytics.debug:UISprite/_onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "layout")
+      callpropvoid        QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "layout"), 0
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "resize")
+      callpropvoid        QName(PackageNamespace("", "#0"), "resize"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "dispose")
+   method
+    refid "com.google.analytics.debug:UISprite:dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L20
+
+L8:
+      label
+      findpropstrict      QName(PackageNamespace("", "#0"), "getChildAt")
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "getChildAt"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      getlocal1
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "removeChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeChild"), 1
+
+L19:
+      inclocal_i          2
+L20:
+      getlocal2
+      getlex              QName(PackageNamespace("", "#0"), "numChildren")
+      iflt                L8
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "forcedHeight")
+   method
+    refid "com.google.analytics.debug:UISprite/forcedHeight/setter"
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedHeight")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedHeight")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "forcedWidth")
+   method
+    refid "com.google.analytics.debug:UISprite/forcedWidth/setter"
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedWidth")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedWidth")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "layout")
+   method
+    refid "com.google.analytics.debug:UISprite:layout"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "forcedWidth")
+   method
+    refid "com.google.analytics.debug:UISprite/forcedWidth/getter"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedWidth")
+      iffalse             L6
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedWidth")
+      returnvalue
+
+L6:
+      getlex              QName(PackageNamespace("", "#0"), "width")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedWidth") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PackageNamespace("", "#0"), "alignTo")
+   method
+    refid "com.google.analytics.debug:UISprite/alignTo"
+    param QName(PackageNamespace("com.google.analytics.debug"), "Align")
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 6
+     localcount 9
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "UISprite")
+      setlocal            7
+
+      getlocal2
+      pushnull
+      ifne                L32
+
+      getlex              QName(PackageNamespace("", "#0"), "parent")
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+      iffalse             L29
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      jump                L32
+
+L29:
+      getlex              QName(PackageNamespace("", "#0"), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+L32:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      ifne                L58
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      pushnull
+      ifne                L41
+
+      returnvoid
+
+L41:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      getproperty         QName(PackageNamespace("", "#0"), "stageHeight")
+      convert_u
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      getproperty         QName(PackageNamespace("", "#0"), "stageWidth")
+      convert_u
+      setlocal            4
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      jump                L93
+
+L58:
+      getlocal2
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "UISprite")
+      astypelate
+      coerce              QName(PackageNamespace("com.google.analytics.debug"), "UISprite")
+      dup
+      setlocal            7
+
+      getproperty         QName(PackageNamespace("", "#0"), "forcedHeight")
+      iffalse             L71
+
+      getlocal            7
+      getproperty         QName(PackageNamespace("", "#0"), "forcedHeight")
+      convert_u
+      setlocal3
+
+      jump                L75
+
+L71:
+      getlocal            7
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      convert_u
+      setlocal3
+
+L75:
+      getlocal            7
+      getproperty         QName(PackageNamespace("", "#0"), "forcedWidth")
+      iffalse             L83
+
+      getlocal            7
+      getproperty         QName(PackageNamespace("", "#0"), "forcedWidth")
+      convert_u
+      setlocal            4
+
+      jump                L87
+
+L83:
+      getlocal            7
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      convert_u
+      setlocal            4
+
+L87:
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+L93:
+      jump                L264
+
+L94:
+      label
+      findproperty        QName(PackageNamespace("", "#0"), "x")
+      getlocal            4
+      pushbyte            2
+      divide
+      getlex              QName(PackageNamespace("", "#0"), "forcedWidth")
+      pushbyte            2
+      divide
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "x")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y")
+      getlocal            6
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "top")
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "y")
+
+      jump                L326
+
+L111:
+      label
+      findproperty        QName(PackageNamespace("", "#0"), "x")
+      getlocal            4
+      pushbyte            2
+      divide
+      getlex              QName(PackageNamespace("", "#0"), "forcedWidth")
+      pushbyte            2
+      divide
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "x")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y")
+      getlocal            6
+      getlocal3
+      add
+      getlex              QName(PackageNamespace("", "#0"), "forcedHeight")
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "bottom")
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "y")
+
+      jump                L326
+
+L132:
+      label
+      findproperty        QName(PackageNamespace("", "#0"), "x")
+      getlocal            5
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "left")
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "x")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y")
+      getlocal3
+      pushbyte            2
+      divide
+      getlex              QName(PackageNamespace("", "#0"), "forcedHeight")
+      pushbyte            2
+      divide
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "y")
+
+      jump                L326
+
+L149:
+      label
+      findproperty        QName(PackageNamespace("", "#0"), "x")
+      getlocal            5
+      getlocal            4
+      add
+      getlex              QName(PackageNamespace("", "#0"), "forcedWidth")
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "right")
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "x")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y")
+      getlocal3
+      pushbyte            2
+      divide
+      getlex              QName(PackageNamespace("", "#0"), "forcedHeight")
+      pushbyte            2
+      divide
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "y")
+
+      jump                L326
+
+L170:
+      label
+      findproperty        QName(PackageNamespace("", "#0"), "x")
+      getlocal            4
+      pushbyte            2
+      divide
+      getlex              QName(PackageNamespace("", "#0"), "forcedWidth")
+      pushbyte            2
+      divide
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "x")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y")
+      getlocal3
+      pushbyte            2
+      divide
+      getlex              QName(PackageNamespace("", "#0"), "forcedHeight")
+      pushbyte            2
+      divide
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "y")
+
+      jump                L326
+
+L190:
+      label
+      findproperty        QName(PackageNamespace("", "#0"), "x")
+      getlocal            5
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "left")
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "x")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y")
+      getlocal            6
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "top")
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "y")
+
+      jump                L326
+
+L204:
+      label
+      findproperty        QName(PackageNamespace("", "#0"), "x")
+      getlocal            5
+      getlocal            4
+      add
+      getlex              QName(PackageNamespace("", "#0"), "forcedWidth")
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "right")
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "x")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y")
+      getlocal            6
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "top")
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "y")
+
+      jump                L326
+
+L222:
+      label
+      findproperty        QName(PackageNamespace("", "#0"), "x")
+      getlocal            5
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "left")
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "x")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y")
+      getlocal            6
+      getlocal3
+      add
+      getlex              QName(PackageNamespace("", "#0"), "forcedHeight")
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "bottom")
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "y")
+
+      jump                L326
+
+L240:
+      label
+      findproperty        QName(PackageNamespace("", "#0"), "x")
+      getlocal            5
+      getlocal            4
+      add
+      getlex              QName(PackageNamespace("", "#0"), "forcedWidth")
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "right")
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "x")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y")
+      getlocal            6
+      getlocal3
+      add
+      getlex              QName(PackageNamespace("", "#0"), "forcedHeight")
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "margin")
+      getproperty         QName(PackageNamespace("", "#0"), "bottom")
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "y")
+
+      jump                L326
+
+L262:
+      label
+      jump                L326
+
+L264:
+      getlocal1
+      setlocal            8
+
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "top")
+      getlocal            8
+      ifstrictne          L272
+
+      pushbyte            0
+      jump                L324
+
+L272:
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "bottom")
+      getlocal            8
+      ifstrictne          L278
+
+      pushbyte            1
+      jump                L324
+
+L278:
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "left")
+      getlocal            8
+      ifstrictne          L284
+
+      pushbyte            2
+      jump                L324
+
+L284:
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "right")
+      getlocal            8
+      ifstrictne          L290
+
+      pushbyte            3
+      jump                L324
+
+L290:
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "center")
+      getlocal            8
+      ifstrictne          L296
+
+      pushbyte            4
+      jump                L324
+
+L296:
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "topLeft")
+      getlocal            8
+      ifstrictne          L302
+
+      pushbyte            5
+      jump                L324
+
+L302:
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "topRight")
+      getlocal            8
+      ifstrictne          L308
+
+      pushbyte            6
+      jump                L324
+
+L308:
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "bottomLeft")
+      getlocal            8
+      ifstrictne          L314
+
+      pushbyte            7
+      jump                L324
+
+L314:
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "bottomRight")
+      getlocal            8
+      ifstrictne          L320
+
+      pushbyte            8
+      jump                L324
+
+L320:
+      jump                L323
+
+      pushbyte            9
+      jump                L324
+
+L323:
+      pushbyte            9
+L324:
+      kill                8
+      lookupswitch        L262, [L94, L111, L132, L149, L170, L190, L204, L222, L240, L262]
+
+L326:
+      getlex              QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "listenResize")
+      not
+      dup
+      iffalse             L336
+
+      pop
+      getlocal1
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "none")
+      equals
+      not
+L336:
+      iffalse             L348
+
+      getlocal2
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "RESIZE")
+      getlex              QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "onResize")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 5
+
+      findproperty        QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "listenResize")
+      pushtrue
+      initproperty        QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "listenResize")
+
+L348:
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace("", "#0"), "alignement")
+
+      getlocal0
+      getlocal2
+      setproperty         QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "alignTarget")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onRemovedFromStage")
+   method
+    refid "com.google.analytics.debug:UISprite/_onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "ADDED_TO_STAGE")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onAddedToStage")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onRemovedFromStage")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+      findpropstrict      QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "dispose")
+      callpropvoid        QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "dispose"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "resize")
+   method
+    refid "com.google.analytics.debug:UISprite/resize"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "alignement")
+      getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+      getproperty         QName(PackageNamespace("", "#0"), "none")
+      ifeq                L10
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "alignTo")
+      getlex              QName(PackageNamespace("", "#0"), "alignement")
+      getlex              QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "alignTarget")
+      callpropvoid        QName(PackageNamespace("", "#0"), "alignTo"), 2
+
+L10:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "margin") type QName(PackageNamespace("com.google.analytics.debug"), "Margin") end
+  trait slot QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "alignTarget") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait method QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "onResize")
+   method
+    refid "com.google.analytics.debug:UISprite:onResize"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "resize")
+      callpropvoid        QName(PackageNamespace("", "#0"), "resize"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "listenResize") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "alignement") type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedHeight") type QName(PackageNamespace("", "#0"), "uint") end
+ end ; instance
+ cinit
+  refid "com.google.analytics.debug:UISprite/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

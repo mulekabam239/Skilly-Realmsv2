@@ -1,0 +1,92 @@
+class
+ refid "com.google.analytics.debug:FailureAlert"
+ instance QName(PackageNamespace("com.google.analytics.debug"), "FailureAlert")
+  extends QName(PackageNamespace("com.google.analytics.debug"), "Alert")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.debug:FailureAlert")
+  iinit
+   refid "com.google.analytics.debug:FailureAlert/iinit"
+   param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "Array")
+   body
+    maxstack 8
+    localcount 7
+    initscopedepth 12
+    maxscopedepth 13
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "bottomLeft")
+     coerce              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     setlocal            4
+
+     pushtrue
+     setlocal            5
+
+     pushfalse
+     setlocal            6
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "verbose")
+     iffalse             L32
+
+     pushstring          "<u><span class=\"uiAlertTitle\">Failure</span>"
+     findpropstrict      QName(ProtectedNamespace("com.google.analytics.debug:Alert"), "spaces")
+     pushbyte            18
+     callproperty        QName(ProtectedNamespace("com.google.analytics.debug:Alert"), "spaces"), 1
+     add
+     pushstring          "</u>\n\n"
+     add
+     getlocal2
+     add
+     coerce_s
+     setlocal2
+
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "center")
+     coerce              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     setlocal            4
+
+     pushfalse
+     setlocal            5
+
+     pushtrue
+     setlocal            6
+
+L32:
+     getlocal0
+     getlocal2
+     getlocal3
+     pushstring          "uiFailure"
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Style")
+     getproperty         QName(PackageNamespace("", "#0"), "failureColor")
+     getlocal            4
+     getlocal            5
+     getlocal            6
+     constructsuper      7
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.google.analytics.debug:FailureAlert/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 11
+   maxscopedepth 12
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

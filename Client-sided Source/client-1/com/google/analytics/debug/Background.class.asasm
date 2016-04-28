@@ -1,0 +1,381 @@
+class
+ refid "com.google.analytics.debug:Background"
+ instance QName(PackageNamespace("com.google.analytics.debug"), "Background")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.debug:Background")
+  iinit
+   refid "com.google.analytics.debug:Background/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.google.analytics.debug:Background/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "drawRounded") flag FINAL dispid 3
+  method
+   refid "com.google.analytics.debug:Background/drawRounded"
+   param null
+   param QName(PackageNamespace("flash.display"), "Graphics")
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "uint")
+   returns QName(PackageNamespace("", "#0"), "void")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 9
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal            5
+
+     pushbyte            0
+     convert_u
+     setlocal            6
+
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Style")
+     getproperty         QName(PackageNamespace("", "#0"), "roundedCorner")
+     convert_u
+     setlocal            7
+
+     getlocal3
+     pushbyte            0
+     greaterthan
+     dup
+     iffalse             L21
+
+     pop
+     getlocal            4
+     pushbyte            0
+     greaterthan
+L21:
+     iffalse             L29
+
+     getlocal3
+     convert_u
+     setlocal            5
+
+     getlocal            4
+     convert_u
+     setlocal            6
+
+     jump                L37
+
+L29:
+     getlocal1
+     getproperty         Multiname("width", [PrivateNamespace("*", "com.google.analytics.debug:Background/drawRounded#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.debug:Background/drawRounded#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Background"), StaticProtectedNs("com.google.analytics.debug:Background"), StaticProtectedNs("Object")])
+     convert_u
+     setlocal            5
+
+     getlocal1
+     getproperty         Multiname("height", [PrivateNamespace("*", "com.google.analytics.debug:Background/drawRounded#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.debug:Background/drawRounded#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Background"), StaticProtectedNs("com.google.analytics.debug:Background"), StaticProtectedNs("Object")])
+     convert_u
+     setlocal            6
+
+L37:
+     getlocal1
+     getproperty         Multiname("stickToEdge", [PrivateNamespace("*", "com.google.analytics.debug:Background/drawRounded#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.debug:Background/drawRounded#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Background"), StaticProtectedNs("com.google.analytics.debug:Background"), StaticProtectedNs("Object")])
+     convert_b
+     dup
+     iffalse             L49
+
+     pop
+     getlocal1
+     getproperty         Multiname("alignement", [PrivateNamespace("*", "com.google.analytics.debug:Background/drawRounded#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.debug:Background/drawRounded#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Background"), StaticProtectedNs("com.google.analytics.debug:Background"), StaticProtectedNs("Object")])
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "none")
+     equals
+     not
+L49:
+     iffalse             L223
+
+     jump                L159
+
+L51:
+     label
+     getlocal2
+     pushbyte            0
+     dup
+     getlocal            5
+     getlocal            6
+     pushbyte            0
+     dup
+     getlocal            7
+     getlocal            7
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRectComplex"), 8
+
+     jump                L222
+
+L63:
+     label
+     getlocal2
+     pushbyte            0
+     dup
+     getlocal            5
+     getlocal            6
+     pushbyte            0
+     dup
+     dup
+     getlocal            7
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRectComplex"), 8
+
+     jump                L222
+
+L75:
+     label
+     getlocal2
+     pushbyte            0
+     dup
+     getlocal            5
+     getlocal            6
+     pushbyte            0
+     dup
+     getlocal            7
+     pushbyte            0
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRectComplex"), 8
+
+     jump                L222
+
+L87:
+     label
+     getlocal2
+     pushbyte            0
+     dup
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     getlocal            7
+     pushbyte            0
+     dup
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRectComplex"), 8
+
+     jump                L222
+
+L99:
+     label
+     getlocal2
+     pushbyte            0
+     dup
+     getlocal            5
+     getlocal            6
+     pushbyte            0
+     getlocal            7
+     pushbyte            0
+     dup
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRectComplex"), 8
+
+     jump                L222
+
+L111:
+     label
+     getlocal2
+     pushbyte            0
+     dup
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     pushbyte            0
+     dup
+     dup
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRectComplex"), 8
+
+     jump                L222
+
+L123:
+     label
+     getlocal2
+     pushbyte            0
+     dup
+     getlocal            5
+     getlocal            6
+     pushbyte            0
+     getlocal            7
+     pushbyte            0
+     getlocal            7
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRectComplex"), 8
+
+     jump                L222
+
+L135:
+     label
+     getlocal2
+     pushbyte            0
+     dup
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     pushbyte            0
+     getlocal            7
+     pushbyte            0
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRectComplex"), 8
+
+     jump                L222
+
+L147:
+     label
+     getlocal2
+     pushbyte            0
+     dup
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     getlocal            7
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRect"), 6
+
+     jump                L222
+
+L157:
+     label
+     jump                L222
+
+L159:
+     getlocal1
+     getproperty         Multiname("alignement", [PrivateNamespace("*", "com.google.analytics.debug:Background/drawRounded#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.debug:Background/drawRounded#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Background"), StaticProtectedNs("com.google.analytics.debug:Background"), StaticProtectedNs("Object")])
+     setlocal            8
+
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "top")
+     getlocal            8
+     ifstrictne          L168
+
+     pushbyte            0
+     jump                L220
+
+L168:
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "topLeft")
+     getlocal            8
+     ifstrictne          L174
+
+     pushbyte            1
+     jump                L220
+
+L174:
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "topRight")
+     getlocal            8
+     ifstrictne          L180
+
+     pushbyte            2
+     jump                L220
+
+L180:
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "bottom")
+     getlocal            8
+     ifstrictne          L186
+
+     pushbyte            3
+     jump                L220
+
+L186:
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "bottomLeft")
+     getlocal            8
+     ifstrictne          L192
+
+     pushbyte            4
+     jump                L220
+
+L192:
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "bottomRight")
+     getlocal            8
+     ifstrictne          L198
+
+     pushbyte            5
+     jump                L220
+
+L198:
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "left")
+     getlocal            8
+     ifstrictne          L204
+
+     pushbyte            6
+     jump                L220
+
+L204:
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "right")
+     getlocal            8
+     ifstrictne          L210
+
+     pushbyte            7
+     jump                L220
+
+L210:
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
+     getproperty         QName(PackageNamespace("", "#0"), "center")
+     getlocal            8
+     ifstrictne          L216
+
+     pushbyte            8
+     jump                L220
+
+L216:
+     jump                L219
+
+     pushbyte            9
+     jump                L220
+
+L219:
+     pushbyte            9
+L220:
+     kill                8
+     lookupswitch        L157, [L51, L63, L75, L87, L99, L111, L123, L135, L147, L157]
+
+L222:
+     jump                L231
+
+L223:
+     getlocal2
+     pushbyte            0
+     dup
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     getlocal            7
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRect"), 6
+
+L231:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

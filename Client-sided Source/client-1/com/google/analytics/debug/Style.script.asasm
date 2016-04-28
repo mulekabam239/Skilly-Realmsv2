@@ -1,0 +1,23 @@
+script ; 2057
+ sinit
+  refid "com.google.analytics.debug:Style.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Style", [PackageNamespace("com.google.analytics.debug")])
+    findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "_Style")
+    constructprop       QName(PackageNamespace("com.google.analytics.debug"), "_Style"), 0
+    initproperty        QName(PackageNamespace("com.google.analytics.debug"), "Style")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("com.google.analytics.debug"), "Style") type QName(PackageNamespace("com.google.analytics.debug"), "_Style") end
+end ; script

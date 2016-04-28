@@ -1,0 +1,29 @@
+script ; 2056
+ sinit
+  refid "com.google.analytics.debug:Margin.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Margin", [PackageNamespace("com.google.analytics.debug")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.google.analytics.debug:Margin"
+    popscope
+    initproperty        QName(PackageNamespace("com.google.analytics.debug"), "Margin")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.google.analytics.debug"), "Margin")
+  #include "Margin.class.asasm"
+ end ; trait
+end ; script

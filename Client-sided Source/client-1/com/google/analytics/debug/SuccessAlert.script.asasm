@@ -1,0 +1,61 @@
+script ; 1980
+ sinit
+  refid "com.google.analytics.debug:SuccessAlert.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("SuccessAlert", [PackageNamespace("com.google.analytics.debug")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.google.analytics.debug"), "UISprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.google.analytics.debug"), "Label")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.google.analytics.debug"), "Alert")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.google.analytics.debug"), "Alert")
+    newclass            "com.google.analytics.debug:SuccessAlert"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.google.analytics.debug"), "SuccessAlert")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.google.analytics.debug"), "SuccessAlert")
+  #include "SuccessAlert.class.asasm"
+ end ; trait
+end ; script

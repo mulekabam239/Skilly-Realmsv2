@@ -1,0 +1,25 @@
+script ; 1808
+ sinit
+  refid "com.google.analytics.debug:ILayout.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ILayout", [PackageNamespace("com.google.analytics.debug")])
+    pushnull
+    newclass            "com.google.analytics.debug:ILayout"
+    initproperty        QName(PackageNamespace("com.google.analytics.debug"), "ILayout")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.google.analytics.debug"), "ILayout")
+  #include "ILayout.class.asasm"
+ end ; trait
+end ; script

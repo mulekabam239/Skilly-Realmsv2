@@ -1,0 +1,29 @@
+script ; 1978
+ sinit
+  refid "com.google.analytics.debug:AlertAction.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("AlertAction", [PackageNamespace("com.google.analytics.debug")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.google.analytics.debug:AlertAction"
+    popscope
+    initproperty        QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+  #include "AlertAction.class.asasm"
+ end ; trait
+end ; script

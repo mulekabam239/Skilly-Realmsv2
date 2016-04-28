@@ -1,0 +1,46 @@
+class
+ refid "com.google.analytics.debug:GIFRequestAlert"
+ instance QName(PackageNamespace("com.google.analytics.debug"), "GIFRequestAlert")
+  extends QName(PackageNamespace("com.google.analytics.debug"), "Alert")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.debug:GIFRequestAlert")
+  iinit
+   refid "com.google.analytics.debug:GIFRequestAlert/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "Array")
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 12
+    maxscopedepth 13
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.google.analytics.debug:GIFRequestAlert/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 11
+   maxscopedepth 12
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class
